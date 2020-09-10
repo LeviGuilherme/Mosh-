@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FundamentalsModule } from './fundamentals/fundamentals.module';
+import { HandlingEventsModule } from './handling-events/handling-events.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { FundamentalsModule } from './fundamentals/fundamentals.module';
   ],
   imports: [
     BrowserModule,
-    FundamentalsModule
+    FundamentalsModule,
+    HandlingEventsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
