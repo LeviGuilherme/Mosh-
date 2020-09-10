@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthorsService } from '../services/authors.service';
 
 @Component({
   selector: 'fundamentals-list-of-authors',
@@ -8,14 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ListOfAuthorsComponent implements OnInit {
   authorsList: string[];
 
-  constructor() { }
+  constructor(service: AuthorsService) {
+    this.authorsList = service.getAuthors();
+   }
 
-  ngOnInit(): void {
-    this.authorsList = this.getAuthors();
-  }
-  
-  getAuthors(){
-    return ['Author One','Author Two','Author Three']
-  }
+  ngOnInit(): void { }
 
 }
