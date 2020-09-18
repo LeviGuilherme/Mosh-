@@ -12,6 +12,8 @@ export class BindingsComponent implements OnInit {
   colspan = 2;
   isPrimary = true;
   isActive = false;
+  newEmail = "some@email.com";
+  newEmail2 = "some@email2.com";
 
   constructor() { }
 
@@ -37,6 +39,11 @@ export class BindingsComponent implements OnInit {
 
   onKeyUpVariable(value) {
     console.log(value);
+  }
+
+  onKeyUpTwoWayBinding(){
+    console.log(this.newEmail);
+    console.log(this.newEmail2);
   }
 
 }

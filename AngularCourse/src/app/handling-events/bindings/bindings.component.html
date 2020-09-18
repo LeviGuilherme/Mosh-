@@ -41,7 +41,8 @@
 <input type="text" #email (keyup.enter)="onKeyUpVariable(email.value)" />
 
 <p>Two-way Binding</p>
-<p>to be continued...</p>
+<input type="text" [value]="newEmail" (keyup.enter)="newEmail = $event.target.value; onKeyUpTwoWayBinding();" />
+<input type="text" [(ngModel)]="newEmail" (keyup.enter)="onKeyUpTwoWayBinding()" />
 
 <br>
 <br>
