@@ -1,1 +1,47 @@
-<p>bindings works!</p>
+<p>Property Binding</p>
+<img [src]="imageUrl" />
+
+<p>Attribute Binding</p>
+<table>
+    <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+    </tr>
+    <tr>
+        <td>This occupates just one column</td>
+        <td>This occupates just one column</td>
+    </tr>
+    <tr>
+        <td [attr.colspan]="colspan">This occupates two columns</td>
+    </tr>
+</table>
+
+<p>Installing and using bootstrap</p>
+<button type="button" class="btn btn-primary">Primary</button>
+<br>
+
+<p>Class Binding</p>
+<button type="button" class="btn" [class.btn-primary]="isPrimary">Primary</button>
+<br>
+
+<p>Style Binding</p>
+<p>using the <a href="https://www.w3schools.com/JSREF/dom_obj_style.asp">DOM Style Objects</a>.</p>
+<button [style.backgroundColor]="isActive ? 'blue' : 'white'">Testing Button</button>
+
+<p>Event Binding</p>
+<div (click)="onDivClicked($event)">
+    <button (click)="onSave($event)">Save</button>
+</div>
+
+<p>Event Filtering</p>
+<input type="text" (keyup.enter)="onKeyUp($event)" />
+
+<p>Template Variables</p>
+<input type="text" (keyup.enter)="onKeyUpValue($event)" />
+<input type="text" #email (keyup.enter)="onKeyUpVariable(email.value)" />
+
+<p>Two-way Binding</p>
+<p>to be continued...</p>
+
+<br>
+<br>
