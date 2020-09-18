@@ -14,6 +14,14 @@ export class BindingsComponent implements OnInit {
   isActive = false;
   newEmail = "some@email.com";
   newEmail2 = "some@email2.com";
+  course = {
+    title: "The complete angular course",
+    subtitle: "Advanced",
+    rating: 4.9752,
+    students: 30133,
+    price: 190.95,
+    releaseDate: new Date(2020, 11, 19)
+  }
 
   constructor() { }
 

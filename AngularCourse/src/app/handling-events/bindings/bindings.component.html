@@ -44,5 +44,13 @@
 <input type="text" [value]="newEmail" (keyup.enter)="newEmail = $event.target.value; onKeyUpTwoWayBinding();" />
 <input type="text" [(ngModel)]="newEmail" (keyup.enter)="onKeyUpTwoWayBinding()" />
 
+<p>Pipes</p>
+{{ course.title | uppercase }} <br />
+{{ course.subtitle | lowercase }} <br />
+{{ course.students | number }} <br />
+{{ course.rating | number:'2.1-1' }} <br />
+{{ course.price | currency:'CAD':false:'3.2-2' }} <br />
+{{ course.releaseDate | date:'dd/MM/yyyy - EEEE' }} <br />
+
 <br>
 <br>
